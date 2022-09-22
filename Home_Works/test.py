@@ -11,12 +11,8 @@ class MetaCounter(type):
         print(f'Instantiated {cls._counter[cls.__name__]} objects of class {cls}!')
         return super().__call__(*args, **kwargs)
 
-
-
 class Foo(metaclass=MetaCounter):
     pass
-
-
 class Bar(metaclass=MetaCounter):
     pass
 
